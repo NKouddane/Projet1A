@@ -1,0 +1,78 @@
+\documentclass[12 pt, a4paper]{report}
+
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks]{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linktoc=all,
+	linkcolor = Blue}
+\pagestyle{fancy}
+\title{\begin{large} Rapport de projet 1A : groupe 38 \end{large}\\ [3ex]
+\begin{Large}
+	\textbf{Photographie Schlieren et onde de choc}
+\end{Large}}
+\author{Hovanes BOKSYAN \\
+		Aymeric FREREJEAN \\
+		Nada KOUDDANE \\
+		Léo LAFFAY \\
+		Alexandre OCKIER \\
+		Yvonne SAUTRIOT \\
+		Nino VIVIAND}
+\newcommand{\tutor}{\textbf{Tuteur du projet :} David RIASSETTO}
+\newcommand{\HRule}{\rule{\linewidth}{0.2mm}}
+
+\begin{document}
+	\begin{spacing}{1.15}
+		\makeatletter
+			\begin{titlepage}
+				\includegraphics[scale = 0.5]{logo.jpeg}
+				\vspace{1.5cm}
+				\vfill
+				\begin{center}
+					\HRule \\ [2ex]
+					{\@title }\\
+					\HRule \\ [3ex]
+					{\@author}\\ [5ex]
+					{\tutor}\\[7ex]
+					\textbf{Membres des Jurys:}\\
+					\begin{multicols}{2}
+						Daniel BELLET\\
+						Benoit CLEYET-MAREL\\
+						\columnbreak
+						Nicolas RUTY\\
+						Mathias VOISIN-FRADIN
+					\end{multicols}
+				\vfill
+				\end{center}
+			\raggedleft\vfill{Phelma - juin 2022}
+			\end{titlepage}
+		\makeatother
+	\newpage
+	\thispagestyle{empty}
+	\addtocounter{page}{1}
+	\tableofcontents
+	\newpage
+	\fancyhf{}
+	\renewcommand{\footrulewidth}{0.4pt}
+	\chead{Photographie Schlieren et onde de choc}
+	\cfoot{Phelma - juin 2022}
+	\rfoot{\thepage}
+	\input{intro.tex}
+	\newpage
+	\input{chapter1.tex}
+	\newpage
+	\input{references.tex}
+	\newpage
+	\input{resume.tex}
+	\input{abstract.tex}
+	\end{spacing}
+\end{document}
