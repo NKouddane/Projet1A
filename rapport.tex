@@ -1,5 +1,4 @@
 \documentclass[12 pt, a4paper]{report}
-
 \usepackage{setspace}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
@@ -9,8 +8,14 @@
 \usepackage{verbatim}
 \usepackage{fancyhdr}
 \usepackage{multicol}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\renewcommand\thesubsubsection{\alph{subsubsection}.}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[colorlinks]{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+\usepackage{array}
 \hypersetup{
 	colorlinks=true,
 	linktoc=all,
@@ -61,6 +66,13 @@
 	\addtocounter{page}{1}
 	\tableofcontents
 	\newpage
+	\cleardoublepage
+	\addcontentsline{toc}{chapter}{\normalsize\listfigurename}
+	\listoffigures
+	\cleardoublepage
+	\addcontentsline{toc}{chapter}{\normalsize\listtablename}
+	\listoftables
+	\newpage
 	\fancyhf{}
 	\renewcommand{\footrulewidth}{0.4pt}
 	\chead{Photographie Schlieren et onde de choc}
@@ -69,6 +81,11 @@
 	\input{intro.tex}
 	\newpage
 	\input{chapter1.tex}
+	\newpage
+	\input{chapter2.tex}
+	\newpage
+	\newpage
+	\input{chapter3.tex}
 	\newpage
 	\input{references.tex}
 	\newpage
