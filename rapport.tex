@@ -5,6 +5,7 @@
 \usepackage[french]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
+\usepackage{array}
 \usepackage{verbatim}
 \usepackage{fancyhdr}
 \usepackage{multicol}
@@ -13,13 +14,11 @@
 \renewcommand\thesubsubsection{\alph{subsubsection}.}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[colorlinks]{hyperref}
-\usepackage{graphicx}
 \graphicspath{ {figures/} }
-\usepackage{array}
 \hypersetup{
 	colorlinks=true,
 	linktoc=all,
-	linkcolor = Blue}
+	linkcolor = Maroon}
 \pagestyle{fancy}
 \title{\begin{large} Rapport de projet 1A : groupe 38 \end{large}\\ [3ex]
 \begin{Large}
@@ -67,11 +66,11 @@
 	\tableofcontents
 	\newpage
 	\cleardoublepage
-	\addcontentsline{toc}{chapter}{\normalsize\listfigurename}
 	\listoffigures
+	\addcontentsline{toc}{chapter}{\normalsize\listfigurename}
 	\cleardoublepage
-	\addcontentsline{toc}{chapter}{\normalsize\listtablename}
 	\listoftables
+	\addcontentsline{toc}{chapter}{\normalsize\listtablename}
 	\newpage
 	\fancyhf{}
 	\renewcommand{\footrulewidth}{0.4pt}
