@@ -12,9 +12,8 @@
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{enumitem}
-\setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
-\renewcommand\thesubsubsection{\alph{subsubsection}.}
+\renewcommand\thesubsubsection{\parindent15pt}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[colorlinks]{hyperref}
 \graphicspath{ {figures/} }
@@ -68,11 +67,12 @@
 	\addtocounter{page}{1}
 	\tableofcontents
 	\newpage
-	\cleardoublepage
 	\listoffigures
-	\addcontentsline{toc}{chapter}{\normalsize\listfigurename}
-	\cleardoublepage
+	\begingroup
+	\let\clearpage\relax
 	\listoftables
+	\endgroup
+	\addcontentsline{toc}{chapter}{\normalsize\listfigurename}
 	\addcontentsline{toc}{chapter}{\normalsize\listtablename}
 	\newpage
 	\fancyhf{}
