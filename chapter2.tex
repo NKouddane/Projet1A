@@ -1,6 +1,16 @@
 \renewcommand{\chaptername}{\scshape Partie}
 \chapter{\normalfont \scshape Dispositif à onde de choc}
 \section{Théorie du tube à choc}
+Une onde de choc est une onde créée par une transition brutale~\ref{ref:wiki_choc}, donc une discontinuité, de grandeurs physiques comme la pression, la masse volumique ou encore la vitesse.
+Pour pouvoir obtenir une onde de choc, on utilise un tube à choc. Le tube à choc sert à  reproduire et concentrer des ondes de choc en simulant des explosions.
+Ici, le tube à choc permet la création d’ondes grâce à la discontinuité en pression à l’intérieur de ce dernier.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.4]{figures/principe_choc.png}
+	\caption{\small{\textit{Principe et évolution de la pression dans le tube à choc}}}
+	\label{fig:principe_choc}
+\end{figure}
+Le tube à choc est composé de deux tubes en PVC séparés par une membrane. Le but étant avec une pompe à vélo de pomper la partie gauche, donc la pression sera élevée. A partir d’une pression P, la membrane se brisera et la discontinuité de pression dans le tube créera l’onde de choc et l’explosion à la sortie du tube.
 \section{Protocole et organisation}
 \subsection{Cahier des charges}
 Après avoir déterminé les objectifs relatifs au dispositif à onde de choc, le diagramme de GANTT suivant a été établi :
@@ -23,15 +33,23 @@ Le travail sur le tube à onde de choc a été confié aux trois membres restant
 	\label{tab:gestion_choc}
 \end{table}
 \subsection{Mise en place du dispositif}
+\subsubsection{\normalfont{\textit{$1^{er}$ essai : onde de choc hydraulique}}}
+Dans un premier temps, un test a été effectué grâce à une pompe hydraulique après avoir rempli une cuve d’eau à entrée réglable. Avec l’entrée bloquée par une vanne, un flux d’eau a été envoyé puis bloqué par la vanne et à un instant t, la vanne a été débloquée et a permis l’observation d’une onde de choc hydraulique (cf. figure~\ref{fig:choc_hydro}).
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.43]{figures/choc_hydro.png}
+	\caption{\small{\textit{Schéma du test réalisé à l'aide de la pompe hydraulique : 2,5 bars}}}
+	\label{fig:choc_hydro}
+\end{figure}
 \section{Observations et conclusion}
-\subsection{Description des résultats}
+\subsection{Observations}
 Afin de choisir le matériau adéquat pour la membrane, une série de tests a été effectuée. En effet, le matériau utilisé sur le site web consulté~\ref{ref:zigunov} qui a inspiré la conception du dispositif était difficilement trouvable en France. Par conséquent, une étude des matériaux dont les caractéristiques se rapprochent d’une feuille PVC de 70 µm a été réalisée.\\
 Le tableau~\ref{tab:choc_resultats} résume les résultats obtenus selon le matériau utilisé pour la membrane.\\
-\begin{table}[ht]
+\begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|l|l|l|l|}
 		\hline
-		&\vtop{\hbox{\strut \small{Feuille de}}\hbox{\strut \small{plastifieuse}}\hbox{\strut \small{(e = 75 µm)}}}&\vtop{\hbox{\strut \small{Feuille}}\hbox{\strut \small{trans-}}\hbox{\strut \small{parente}}\hbox{\strut \small{(feuille de}}\hbox{\strut \small{classeur)}}}&\vtop{\hbox{\strut \small{Feuille de}}\hbox{\strut \small{papier}}\hbox{\strut \small{impri-}}\hbox{\strut \small{mante}}}&\vtop{\hbox{\strut \small{Mouchoirs}}\hbox{\strut \small{en papier}}}&\vtop{\hbox{\strut \small{Rouleau}}\hbox{\strut \small{adhésif}}\hbox{\strut \small{emballage}}\hbox{\strut \small{(ultra}}\hbox{\strut \small{résistant)}}}&\vtop{\hbox{\strut \bfseries\small{Rouleau}}\hbox{\strut \bfseries\small{adhésif}}\hbox{\strut \bfseries\small{type}}\hbox{\strut \bfseries\small{gaffer}}}\\
+		&\vtop{\hbox{\strut \small{Feuille de}}\hbox{\strut \small{plastifieuse}}\hbox{\strut \small{(e = 75 µm)}}}&\vtop{\hbox{\strut \small{Feuille}}\hbox{\strut \small{trans-}}\hbox{\strut \small{parente}}\hbox{\strut \small{(feuille de}}\hbox{\strut \small{classeur)}}}&\vtop{\hbox{\strut \small{Feuille de}}\hbox{\strut \small{papier}}\hbox{\strut \small{impri-}}\hbox{\strut \small{mante}}}&\vtop{\hbox{\strut \small{Mouchoirs}}\hbox{\strut \small{en papier}}}&\vtop{\hbox{\strut \small{Rouleau}}\hbox{\strut \small{adhésif}}\hbox{\strut \small{emballage}}\hbox{\strut \small{(ultra}}\hbox{\strut \small{résistant)}}}&\vtop{\hbox{\strut \bfseries\small{Rouleau}}\hbox{\strut \bfseries\small{adhésif}}\hbox{\strut \bfseries\small{type}}\hbox{\strut \bfseries\small{"gaffer"}}}\\
 		\hline
 		\vtop{\hbox{\strut \small{Pression}}\hbox{\strut \small{avant}}\hbox{\strut \small{rupture}}}&\vtop{\hbox{\strut \small{Pas de}}\hbox{\strut \small{rupture}}}&\vtop{\hbox{\strut \small{Pas de}}\hbox{\strut \small{rupture}}}&\vtop{\hbox{\strut \small{Pas de}}\hbox{\strut \small{rupture}}}&\small{< 1 bar}&\vtop{\hbox{\strut \small{Pas de}}\hbox{\strut \small{rupture}}}&\vtop{\hbox{\strut \small{\bfseries$\simeq$ 2,5}}\hbox{\strut \small{\small\bfseries bars}}}\\
 		\hline
@@ -41,15 +59,20 @@ Le tableau~\ref{tab:choc_resultats} résume les résultats obtenus selon le mat�
 	\caption{\small\textit{Résultats obtenus en fonction du matériau utilisé pour la membrane}}
 	\label{tab:choc_resultats}
 \end{table}
-Le matériau le plus concluant s’est avéré être le scotch type “gaffer”, il a donc été conservé pour réaliser un test filmé. Les images suivantes ont été prises après avoir placé le canon du générateur à onde de choc en face d’un récipient rempli d’eau : \\
-\begin{figure}[ht]
+Le matériau le plus concluant s’est avéré être le scotch type “gaffer”, il a donc été conservé pour réaliser un test filmé. Les images de la figure~\ref{fig:choc_filmee} ont été prises après avoir placé le canon du générateur à onde de choc en face d’un récipient rempli d’eau (1 seule couche de scotch, rupture à 2,5 bars) :\\
+\begin{figure}[H]
 	\centering
 	\includegraphics[scale = 0.5]{figures/choc_filmee.png}
-	\caption{\small{\textit{Images du test de l'onde de choc générée}}}
+	\caption{\small{\textit{Images de l'onde de choc générée, pression avant rupture : 2,5 bars}}}
 	\label{fig:choc_filmee}
 \end{figure}
-\\
-On constate que, même à une pression de 2,5 bars, le système génère une résultat souhaité. En effet, trois éléments témoignent du passage de l’onde de choc : tout d’abord, on observe de fortes éclaboussures, ce qui montre bien la vitesse élevée de sortie de l’air. Les mouvements des gouttes d’eau  sont accompagnés par un bruit sourd et de la fumée sortant du tuyau, comme le montre la dernière image de la figure~\ref{fig:choc_filmee}.\\\\
-En empilant plusieurs couches de scotch, la pression avant rupture peut être augmentée jusqu’à 4 ou 5 bars, ce qui permet d’obtenir une onde de choc plus rapide. Cependant, une vitesse plus importante signifie une photographie plus difficile à visualiser à travers le dispositif d’imagerie Schlieren. De plus, le bruit serait encore plus sourd et nécessiterait alors le port d’un casque anti-bruit. 
-\subsection{Interprétation}
+On constate que, même à une pression de 2,5 bars, le système génère une résultat souhaité. En effet, trois éléments témoignent du passage de l’onde de choc : tout d'abord, on observe de fortes éclaboussures, ce qui montre bien la vitesse élevée de sortie de l'air. Les mouvements des gouttes d'eau sont accompagnés par un bruit sourd et de la fumée sortant du tuyau,comme le montre la dernière image de la figure~\ref{fig:choc_filmee}.\\\\
+La figure~\ref{fig:choc_5bars} représente les images obtenues pour 2 couches de scotch, c'est-à-dire pour une pression avant rupture de 5 bars.\\
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.5]{figures/choc_5bars.png}
+	\caption{\small{\textit{Images de l'onde de choc générée, pression avant rupture : 5 bars}}}
+	\label{fig:choc_5bars}~
+\end{figure}
+
 \subsection{Conclusion partielle}
