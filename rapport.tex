@@ -12,7 +12,6 @@
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{enumitem}
-\usepackage{longtable}
 \usepackage{caption}
 \usepackage{subcaption}
 \setcounter{secnumdepth}{3}
@@ -71,11 +70,8 @@
 	\tableofcontents
 	\newpage
 	\listoffigures
-	\begingroup
-	\let\clearpage\relax
-	\listoftables
-	\endgroup
 	\addcontentsline{toc}{chapter}{\normalsize\listfigurename}
+	\listoftables
 	\addcontentsline{toc}{chapter}{\normalsize\listtablename}
 	\newpage
 	\fancyhf{}
