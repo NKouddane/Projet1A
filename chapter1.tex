@@ -1,11 +1,11 @@
 \renewcommand{\chaptername}{\scshape Partie}
 \chapter{\normalfont \scshape Effet Schlieren}
 \section{Principe du dispositif}
-L'air est un fluide transparent, il possède un indice de réfraction qui suit une évolution linéaire par rapport à la densité :
+L'air est un fluide transparent, il possède un indice de réfraction qui suit une évolution linéaire par rapport à la masse volumique :
 \begin{align}
 	n = 1\,+\,k\,\rho
 \end{align}
-où $\mathnormal{n}$ est l'indice de réfraction du fluide, $\mathnormal{\rho}$ sa densité et $\mathnormal{k}$ une constante appelée constante de Gladstone-Dale~\ref{ref:harvardedu}. Si $\mathnormal{n_i}$ et $\mathnormal{n_r}$ sont respectivement les indices de réfraction des rayons incident et réfléchi, $\mathnormal{\theta_i}$ l'angle d'incidence et $\mathnormal{\theta_r}$ l'angle de réfraction, on peut écrire la loi de \textsc{Snell-Descartes} :
+où $\mathnormal{n}$ est l'indice de réfraction du fluide, $\mathnormal{\rho}$ sa masse volumique et $\mathnormal{k}$ une constante appelée constante de Gladstone-Dale~\ref{ref:harvardedu}. Si $\mathnormal{n_i}$ et $\mathnormal{n_r}$ sont respectivement les indices de réfraction des rayons incident et réfléchi, $\mathnormal{\theta_i}$ l'angle d'incidence et $\mathnormal{\theta_r}$ l'angle de réfraction, on peut écrire la loi de \textsc{Snell-Descartes} :
 \begin{align}
 	n_i\times\,sin(\theta_i) = n_r\times\,sin(\theta_r) 
 \end{align}
@@ -64,7 +64,7 @@ Le système optique avec lentilles convergentes a été constitué à partir des
 \subsubsection{\large\normalfont{\textsc{Montage avec miroir sphérique}}}
 Pour ce montage, le matériel suivant a été utilisé :
 \begin{itemize}
-	\item Un miroir sphérique : \textbf{ø 86 mm}, distance focale : \textbf{520 mm};
+	\item Un miroir sphérique : \textbf{ø 86 mm}, distance focale : \textbf{260 mm};
 	\item Une lame de rasoir;
 	\item Une source lumineuse : lampe disponible en salle de TP ou flash de téléphone portable;
 	\item Un appareil photo.
@@ -143,14 +143,14 @@ En utilisant la relation des gaz parfaits :
 \frac{P}{\rho} = \frac{R\, T}{M}
 \label{gaz_parfait}
 \end{align}
-on obtient, pour le butane, une variation d'indice de :\\\\
+on obtient, pour une flamme à $T$=\textbf{1000 °C}, une variation d'indice de :\\\\
 \centerline{$\frac{\Delta n}{n} = $ \textbf{20,7\,\%}} \\\
 Le sèche-cheveux induisant des variations de température plus faibles, il est plus difficile d’observer le flux de chaleur émis. En effet, en utilisant la relation des gaz parfait et en prenant une température \textbf{$T’$ = 90°C} pour le sèche-cheveux, on calcule la variation d'indice de réfraction à partir des relations~\ref{indice_rho} et~\ref{indice_pression}. On trouve finalement une variation relative d’indice optique de $\frac{\Delta n}{n}$ = \textbf{4,8\,\%}, bien plus faible que précédemment et non observable à l'œil nu.
 \subsection{Comparaison des deux montages}
 \subsubsection{\large\normalfont{\textsc{Montage avec lentilles convergentes}}}
 Avec le dispositif des lentilles, le contraste n’est pas excellent. Cela est dû à la précision du montage qui est nettement moins bonne que celle du montage avec le miroir. En effet, l’utilisation de trois lentilles affecte la précision du montage et ainsi le rendu final. Le filtrage permet néanmoins une amélioration du contraste et améliore la qualité sur l’écran. Ce montage est correct pour des fortes variations d’indices notamment avec l’utilisation d’une flamme (briquet ou allumette). Cependant, avec le sèche-cheveux, les variations d’indices sont moins importantes car la température est plus faible que celle d’une flamme. De ce fait, on ne peut observer l’effet Schlieren avec ce montage. C’est pourquoi il est nécessaire d’utiliser un autre montage optique.
-\subsubsection{\large\normalfont{\textsc{Montage avec lentilles convergentes}}}
-Avec le dispositif du miroir, le contraste est nettement meilleur. De plus, on observe qu’avec le filtrage, le contraste est encore amélioré. L’utilisation d’un seul élément optique permet une meilleure précision et ainsi un rendu très net. Cette fois-ci, nous pouvons observer nettement l’effet du sèche-cheveux sur la variation de l’indice de l’air. Il y a une réflexion totale de la lumière, ce qui permet d’obtenir une netteté plus importante. Pour améliorer ce rendu, nous pourrions utiliser des filtres de couleurs afin d’améliorer le contraste, mais cette solution ne sera pas détaillée ici.
+\subsubsection{\large\normalfont{\textsc{Montage avec miroir sphérique}}}
+Avec le dispositif du miroir, le contraste est nettement meilleur, d'autant plus avec le filtrage. L’utilisation d’un seul élément optique permet une meilleure précision et ainsi un rendu très net. Cette fois-ci, nous pouvons observer nettement l’effet du sèche-cheveux sur la variation de l’indice de l’air. Il y a une réflexion totale de la lumière, ce qui permet d’obtenir une netteté plus importante. Pour améliorer ce rendu, nous pourrions utiliser des filtres de couleurs afin d’améliorer le contraste, mais cette solution ne sera pas détaillée ici.
 \\
 \\
 Le tableau ci-dessous récapitule les différentes caractéristiques des deux montages :
@@ -173,6 +173,6 @@ Le tableau ci-dessous récapitule les différentes caractéristiques des deux mo
 	\label{fig:tableau_schlieren}
 \end{table}
 \subsection{Conclusion partielle}
-En conclusion, la supériorité de qualité du montage avec miroir sphérique repose sur le fait que sa géométrie permet une bien meilleure convergence de rayon lumineux, cet avantage est d’autant plus marqué que la source est ponctuelle et que le filtrage bien opéré.
+En conclusion, la supériorité de qualité du montage avec miroir sphérique repose sur le fait que sa géométrie permet une bien meilleure convergence des rayons lumineux, cet avantage est d’autant plus marqué que la source est ponctuelle et que le filtrage bien opéré.
 \\\\
 Pour pousser encore plus loin l'intérêt de l’effet Schlieren, il a été décidé de réaliser un dispositif à onde de choc. Cette dernière provoque une variation de l’indice optique mais de manière très brève. Le dispositif en question couplé avec le montage optique Schlieren permet de visualiser nettement cette variation d’indice, et ainsi détecter la présence d’une onde de choc.  
