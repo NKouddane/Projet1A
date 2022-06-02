@@ -90,7 +90,7 @@ Pour ce montage, le matériel suivant a été utilisé :
 		\caption{\small{\textit{Schéma de la carte PCB}}}
 		\label{fig:led_pcb}
 	\end{subfigure}
-	\caption{\small{\textit{Schéma du schéma et de la PCB réalisés pour la LED}}}
+	\caption{\small{\textit{Schéma Kicad et schéma de la PCB réalisés pour la LED}}}
 	\label{fig:led}
 \end{figure}
 L’utilisation de la LED haute intensité permet de régler deux problèmes qui sont apparus lors de la mise en place. Premièrement, l’intensité obtenue sur l’écran est améliorée, ce qui permet une meilleure observation de l’effet Schlieren. Deuxièmement, l’utilisation de la LED et de la boîte permet une meilleure précision du montage et l’obtention d’une source ponctuelle qui accorde un meilleur filtrage avec la lame de rasoir. La lumière est également plus blanche qu’une lampe de téléphone, améliorant ainsi la netteté de l’image. L’intensité de cette dernière peut être réglée à l’aide d’un potentiomètre.
@@ -119,7 +119,7 @@ d'autre part le même dispositif cette fois-ci avec combustion :\\
 	\caption{\small{\textit{Effet Schlieren observé sur une flamme en combustion}}}
 	\label{fig:avec_combustion}
 \end{figure}
-Sur la première image, on observe la propulsion du butane dans l’air engendrée par le briquet, puis sur la suivante le gaz se concentre de sorte à former un flux laminaire en apparence. Lorsque la combustion apparaît on observe le reflet de la lumière émise par la flamme sous forme de tâches oranges mais aussi le flux d’air chaud créé par la flamme. \\
+Sur la première image, on observe la propulsion du butane dans l’air engendrée par le briquet, puis sur la suivante le gaz se concentre de sorte à former un flux laminaire en apparence et dirigé vers le bas, ce qui s’explique par le fait que le butane est plus dense que l’air ($d$ = \textbf{2,29}). Lorsque la combustion apparaît, on observe le reflet de la lumière émise par la flamme sous forme de tâches oranges mais aussi le flux d’air chaud créé par la flamme. \\
 La figure~\ref{fig:seche_cheveux} représente l'image obtenue par effet Schlieren sur un sèche-cheveux :
 \begin{figure}[H]
 	\centering
@@ -127,10 +127,10 @@ La figure~\ref{fig:seche_cheveux} représente l'image obtenue par effet Schliere
 	\caption{\small{\textit{Effet Schlieren observé sur l'air sortant d'un sèche-cheveux}}}
 	\label{fig:seche_cheveux}
 \end{figure}
-Dans l’ensemble des calculs on considère que les conditions initiales sont : \\
-$T =$ \textbf{25 °C}, \,$P$ = \textbf{1 atm}, \,$\rho$ = \textbf{1,2} $Kg/m^{3}$\\
+Dans l’ensemble des calculs, on considère que les conditions initiales sont : \\
+$T =$ \textbf{25 °C}, \,$P$ = \textbf{1 atm}, \,$\rho$ = \textbf{1,18} $Kg/m^{3}$, $k$ = \textbf{2,3}$\,\,\times\,10^{-4}\,\,m^{3}/Kg\,$ et on considère que l'air se comporte comme un gaz parfait.\\
 
-Sachant que l’indice optique du butane est \textbf{$\mathnormal{n}$ = 1,443}~\ref{ref:techno_science}, la variation relative d’indice optique est de \textbf{44\,\%}, ce qui est en réalité observable sans dispositif particulier (l’eau a un indice optique de \textbf{1,33}), néanmoins le filtrage opéré permet de mieux mettre en évidence les détails.\\ \\
+Sachant que l’indice optique du butane est \textbf{$\mathnormal{n}$ = 1,443}~\ref{ref:techno_science}, la variation relative d’indice optique est de \textbf{44\,\%}, ce qui est en réalité observable sans dispositif particulier (l’eau a un indice optique de \textbf{1,33}). Néanmoins, le filtrage opéré permet de mieux mettre en évidence les détails.\\ \\
 Le flux d’air chaud observé est quant à lui observable non pas grâce à un changement de molécules, mais grâce à un changement de masse volumique induit par un changement de température. Sachant que la température d'une flamme orange est autour de $T$=\textbf{1000 °C}, on peut en déduire la variation d'indice optique relative induite par cette variation de température :
 \begin{align}
 	\frac{\Delta n}{n}=\frac{n'-n}{n} \,&= \, k \,\,\frac{\rho' - \rho}{n}
@@ -138,14 +138,19 @@ Le flux d’air chaud observé est quant à lui observable non pas grâce à un 
 	|\rho' - \rho| \,&= \, P \,\,\frac{M}{R}\,\bigg{|}\frac{1}{T'}-\frac{1}{T}\bigg{|}
 	\label{indice_pression}
 \end{align}
-Sachant que $\frac{P}{\rho} = \frac{R\, T}{M}$, on trouve $\frac{\Delta n}{n} = $ \textbf{20,7\,\%}\\
-\\
-Le sèche-cheveux induisant des variations de température plus faibles, il est plus difficile d’observer le flux de chaleur émis. En effet en utilisant la relation des gaz parfait et en prenant une température \textbf{$T’$ = 90°C} pour le sèche-cheveux on calcule la variation d'indice de réfraction à partir des relations~\ref{indice_rho} et~\ref{indice_pression}. On trouve finalement une variation relative d’indice optique de $\frac{\Delta n}{n} = 4,8\,\%$, bien plus faible que précédemment et non observable à l'œil nu.
+En utilisant la relation des gaz parfaits :
+\begin{align}
+\frac{P}{\rho} = \frac{R\, T}{M}
+\label{gaz_parfait}
+\end{align}
+on obtient, pour le butane, une variation d'indice de :\\\\
+\centerline{$\frac{\Delta n}{n} = $ \textbf{20,7\,\%}} \\\
+Le sèche-cheveux induisant des variations de température plus faibles, il est plus difficile d’observer le flux de chaleur émis. En effet, en utilisant la relation des gaz parfait et en prenant une température \textbf{$T’$ = 90°C} pour le sèche-cheveux, on calcule la variation d'indice de réfraction à partir des relations~\ref{indice_rho} et~\ref{indice_pression}. On trouve finalement une variation relative d’indice optique de $\frac{\Delta n}{n}$ = \textbf{4,8\,\%}, bien plus faible que précédemment et non observable à l'œil nu.
 \subsection{Comparaison des deux montages}
 \subsubsection{\large\normalfont{\textsc{Montage avec lentilles convergentes}}}
 Avec le dispositif des lentilles, le contraste n’est pas excellent. Cela est dû à la précision du montage qui est nettement moins bonne que celle du montage avec le miroir. En effet, l’utilisation de trois lentilles affecte la précision du montage et ainsi le rendu final. Le filtrage permet néanmoins une amélioration du contraste et améliore la qualité sur l’écran. Ce montage est correct pour des fortes variations d’indices notamment avec l’utilisation d’une flamme (briquet ou allumette). Cependant, avec le sèche-cheveux, les variations d’indices sont moins importantes car la température est plus faible que celle d’une flamme. De ce fait, on ne peut observer l’effet Schlieren avec ce montage. C’est pourquoi il est nécessaire d’utiliser un autre montage optique.
 \subsubsection{\large\normalfont{\textsc{Montage avec lentilles convergentes}}}
-Avec le dispositif du miroir, le contraste est nettement meilleur. De plus, on observe qu’avec le filtrage, le contraste est encore amélioré. L’utilisation d’un seul élément optique permet une meilleure précision et ainsi un rendu très net. Cette fois-ci, nous pouvons observer nettement l’effet du sèche-cheveux sur la variation de l’indice de l’air. Il y a une réflexion totale de la lumière, ce qui permet d’obtenir une netteté plus importante. Pour améliorer ce rendu, nous pourrions utiliser des filtres de couleurs afin d’améliorer le contraste mais cette solution ne sera pas détaillée ici.
+Avec le dispositif du miroir, le contraste est nettement meilleur. De plus, on observe qu’avec le filtrage, le contraste est encore amélioré. L’utilisation d’un seul élément optique permet une meilleure précision et ainsi un rendu très net. Cette fois-ci, nous pouvons observer nettement l’effet du sèche-cheveux sur la variation de l’indice de l’air. Il y a une réflexion totale de la lumière, ce qui permet d’obtenir une netteté plus importante. Pour améliorer ce rendu, nous pourrions utiliser des filtres de couleurs afin d’améliorer le contraste, mais cette solution ne sera pas détaillée ici.
 \\
 \\
 Le tableau ci-dessous récapitule les différentes caractéristiques des deux montages :
@@ -159,7 +164,7 @@ Le tableau ci-dessous récapitule les différentes caractéristiques des deux mo
 		\hline
 		\small{\textbf{Contraste obtenu}}&\vtop{\hbox{\strut \small{Contraste bien visible,}}\hbox{\strut \small{images nettes}}}&\vtop{\hbox{\strut \small{Images moins nettes,}}\hbox{\strut \small{contraste pas très visible}}}\\
 		\hline
-		\small{\textbf{Objets observables}}&\vtop{\hbox{\strut \small{Flamme d'un briquet ou}}\hbox{\strut \small{d'une allumette, flux d'air }}\hbox{\strut \small{d'un sèche-cheveux}}}&\vtop{\hbox{\strut \small{Flamme d'un briquet ou}}\hbox{\strut \small{d'une allumette. Flux d'air}}\hbox{\strut \small{du sèche-cheveux non visible}}\hbox{\strut \small{à cause du contraste}}}\\
+		\small{\textbf{Objets observables}}&\vtop{\hbox{\strut \small{Flamme d'un briquet ou}}\hbox{\strut \small{d'une allumette, flux d'air }}\hbox{\strut \small{d'un sèche-cheveux}}}&\vtop{\hbox{\strut \small{Flamme d'un briquet ou}}\hbox{\strut \small{d'une allumette. Flux d'air}}\hbox{\strut \small{du sèche-cheveux non visible}}\hbox{\strut \small{à cause du faible contraste}}}\\
 		\hline
 		\small{\textbf{Coût du matériel}}&\small{Matériel coûteux}&\vtop{\hbox{\strut \small{Matériel moins coûteux}}\hbox{\strut \small{que le miroir sphérique}}}\\
 		\hline
@@ -168,6 +173,6 @@ Le tableau ci-dessous récapitule les différentes caractéristiques des deux mo
 	\label{fig:tableau_schlieren}
 \end{table}
 \subsection{Conclusion partielle}
-On remarque bien qu'en comparant la différence de contraste entre les deux méthodes, la méthode avec miroir donne une image plus visible qu'avec les lentilles. En optant plutôt pour le flash d'un téléphone portable ou pour la LED que pour une lampe, on peut améliorer le rendu des tests.\\
-\\
-Pour pousser encore plus loin l'intérêt de l’effet Schlieren, il a été décidé de réaliser un dispositif à onde de choc. Cette dernière provoque une variation de l’indice optique mais de manière très brève. Le dispositif en question couplé avec le montage optique Schlieren permet de visualiser nettement cette variation d’indice, et ainsi détecté la présence d’une onde de choc.  
+En conclusion, la supériorité de qualité du montage avec miroir sphérique repose sur le fait que sa géométrie permet une bien meilleure convergence de rayon lumineux, cet avantage est d’autant plus marqué que la source est ponctuelle et que le filtrage bien opéré.
+\\\\
+Pour pousser encore plus loin l'intérêt de l’effet Schlieren, il a été décidé de réaliser un dispositif à onde de choc. Cette dernière provoque une variation de l’indice optique mais de manière très brève. Le dispositif en question couplé avec le montage optique Schlieren permet de visualiser nettement cette variation d’indice, et ainsi détecter la présence d’une onde de choc.  
