@@ -57,9 +57,8 @@ Par ailleurs, parmi les sept membres du groupe, quatre ont été chargés de met
 Le système optique avec lentilles convergentes a été constitué à partir des éléments suivants :
 \begin{itemize}
 	\item Deux lentilles convergentes de distance focale \textbf{50 mm};
-	\item Une troisième lentille de distance focale \textbf{35 mm} pour transformer la source lumineuse en une source ponctuelle; 
 	\item Une lame de rasoir;
-	\item Une source lumineuse : le flash d'un téléphone portable;
+	\item Une source lumineuse : le flash d'un téléphone portable recouverte de papier aluminium;
 	\item Un écran.
 \end{itemize}
 \subsubsection{\large\normalfont{\textsc{Montage avec miroir sphérique}}}
@@ -128,19 +127,20 @@ La figure~\ref{fig:seche_cheveux} représente l'image obtenue par effet Schliere
 	\caption{\small{\textit{Effet Schlieren observé sur l'air sortant d'un sèche-cheveux}}}
 	\label{fig:seche_cheveux}
 \end{figure}
-Sachant que l’indice optique du butane est \textbf{$\mathnormal{n}$ = 1,443}~\ref{ref:techno_science}, la variation relative d’indice optique est de \textbf{44\%}, ce qui est en réalité observable sans dispositif particulier (l’eau a un indice optique de \textbf{1,33}), néanmoins le filtrage opéré permet de mieux mettre en évidence les détails.\\ \\
-Le flux d’air chaud observé est quant à lui observable non pas grâce à un changement de molécules, mais grâce à un changement de masse volumique induit par un changement de température. Sachant que les photons émis par un corps noir ont une longueur d’onde proportionnelle à $T^{4}$, on peut relier la couleur de la flamme à la couleur observée de la flamme.
-\\
-\\
-Le sèche-cheveux induisant des variations de température plus faibles, il est plus difficile d’observer le flux de chaleur émis. En effet en utilisant la relation des gaz parfait et en prenant une température \textbf{$T’$ = 90°C} pour le sèche-cheveux on calcule :
+Dans l’ensemble des calculs on considère que les conditions initiales sont : \\
+$T =$ \textbf{25 °C}, \,$P$ = \textbf{1 atm}, \,$\rho$ = \textbf{1,2} $Kg/m^{3}$\\
+
+Sachant que l’indice optique du butane est \textbf{$\mathnormal{n}$ = 1,443}~\ref{ref:techno_science}, la variation relative d’indice optique est de \textbf{44\,\%}, ce qui est en réalité observable sans dispositif particulier (l’eau a un indice optique de \textbf{1,33}), néanmoins le filtrage opéré permet de mieux mettre en évidence les détails.\\ \\
+Le flux d’air chaud observé est quant à lui observable non pas grâce à un changement de molécules, mais grâce à un changement de masse volumique induit par un changement de température. Sachant que la température d'une flamme orange est autour de $T$=\textbf{1000 °C}, on peut en déduire la variation d'indice optique relative induite par cette variation de température :
 \begin{align}
-	\frac{n'-n}{n} \,&= \, k \,\,\frac{\rho' - \rho}{n}
+	\frac{\Delta n}{n}=\frac{n'-n}{n} \,&= \, k \,\,\frac{\rho' - \rho}{n}
 	\label{indice_rho}\\
-	\rho' - \rho \,&= \, P \,\,\frac{M}{R}\,\bigg{(}\frac{1}{T'}-\frac{1}{T}\bigg{)}
+	|\rho' - \rho| \,&= \, P \,\,\frac{M}{R}\,\bigg{|}\frac{1}{T'}-\frac{1}{T}\bigg{|}
 	\label{indice_pression}
 \end{align}
-C'est-à-dire :\\
-Soit finalement une variation relative d’indice optique de , bien plus faible que précédemment et non observable à l'œil nu.\\ \\
+Sachant que $\frac{P}{\rho} = \frac{R\, T}{M}$, on trouve $\frac{\Delta n}{n} = $ \textbf{20,7\,\%}\\
+\\
+Le sèche-cheveux induisant des variations de température plus faibles, il est plus difficile d’observer le flux de chaleur émis. En effet en utilisant la relation des gaz parfait et en prenant une température \textbf{$T’$ = 90°C} pour le sèche-cheveux on calcule la variation d'indice de réfraction à partir des relations~\ref{indice_rho} et~\ref{indice_pression}. On trouve finalement une variation relative d’indice optique de $\frac{\Delta n}{n} = 4,8\,\%$, bien plus faible que précédemment et non observable à l'œil nu.
 \subsection{Comparaison des deux montages}
 \subsubsection{\large\normalfont{\textsc{Montage avec lentilles convergentes}}}
 Avec le dispositif des lentilles, le contraste n’est pas excellent. Cela est dû à la précision du montage qui est nettement moins bonne que celle du montage avec le miroir. En effet, l’utilisation de trois lentilles affecte la précision du montage et ainsi le rendu final. Le filtrage permet néanmoins une amélioration du contraste et améliore la qualité sur l’écran. Ce montage est correct pour des fortes variations d’indices notamment avec l’utilisation d’une flamme (briquet ou allumette). Cependant, avec le sèche-cheveux, les variations d’indices sont moins importantes car la température est plus faible que celle d’une flamme. De ce fait, on ne peut observer l’effet Schlieren avec ce montage. C’est pourquoi il est nécessaire d’utiliser un autre montage optique.
